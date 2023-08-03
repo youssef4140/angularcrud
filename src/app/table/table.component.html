@@ -1,10 +1,14 @@
 
   <div class="table-container">
-    <div class="search-bar">
-      <input type="text" name="search" placeholder="search..." [(ngModel)]="searchText">
-    </div>
+  <div class="search-box">
+    <input class ="search" type="text" name="search" placeholder="search..." [(ngModel)]="searchText">
+    <a href="#">
+      <i><mat-icon>search</mat-icon></i>
+    </a>
+  </div>
     
       <table>
+
         <tr>
           <th>id</th>
           <th>first name</th>

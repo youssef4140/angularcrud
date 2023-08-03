@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import { FormsModule } from '@angular/forms'
+import {MatIconModule} from '@angular/material/icon'
 
 import { SearchFilterPipe } from './search-filter.pipe';
 
@@ -39,6 +40,7 @@ import { SearchFilterPipe } from './search-filter.pipe';
     MatButtonModule,
     MatTableModule,
     FormsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
