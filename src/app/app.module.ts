@@ -13,6 +13,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
+import { FormsModule } from '@angular/forms'
+
+import { SearchFilterPipe } from './search-filter.pipe';
 
 
 
@@ -20,7 +23,10 @@ import {MatTableModule} from '@angular/material/table';
   declarations: [
     AppComponent,
     AddFormComponent,
-    TableComponent
+    TableComponent,
+    SearchFilterPipe
+  ],
+  exports: [
   ],
   imports: [
     BrowserModule,
@@ -32,6 +38,7 @@ import {MatTableModule} from '@angular/material/table';
     ReactiveFormsModule,
     MatButtonModule,
     MatTableModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

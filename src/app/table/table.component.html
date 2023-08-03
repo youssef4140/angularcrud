@@ -1,5 +1,8 @@
 
   <div class="table-container">
+    <div class="search-bar">
+      <input type="text" name="search" placeholder="search..." [(ngModel)]="searchText">
+    </div>
     
       <table>
         <tr>
@@ -10,7 +13,7 @@
           <th>Email</th>
           <th>Delete/Edit</th>
         </tr>
-        <tr *ngFor="let friend of friends; let i = index" >
+        <tr *ngFor="let friend of friends | searchFilter: searchText ; let i = index" >
           <td>{{i}}</td>
           <ng-container *ngIf="friend.editing == false">
           <td>{{friend.firstName}}</td>

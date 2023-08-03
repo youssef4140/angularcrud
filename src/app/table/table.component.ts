@@ -1,4 +1,5 @@
 import { Component, Input, } from '@angular/core';
+import { AppModule } from '../app.module';
 
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 
@@ -20,7 +21,10 @@ export interface FriendSchema {
 })
 
 
+
 export class TableComponent  {
+  searchText:any;
+
   @Input() friends: FriendSchema[] = [];
   
 
