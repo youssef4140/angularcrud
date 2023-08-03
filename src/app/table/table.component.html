@@ -1,0 +1,45 @@
+
+  <div class="table-container">
+    
+      <table>
+        <tr>
+          <th>id</th>
+          <th>first name</th>
+          <th>Last Name</th>
+          <th>Number</th>
+          <th>Email</th>
+          <th>Delete/Edit</th>
+        </tr>
+        <tr *ngFor="let friend of friends; let i = index" >
+          <td>{{i}}</td>
+          <ng-container *ngIf="friend.editing == false">
+          <td>{{friend.firstName}}</td>
+          <td>{{friend.lastName}}</td>
+          <td>{{friend.number}}</td>
+          <td>{{friend.email}}</td>
+          <td>
+            <button (click)="DeleteContact(i)">delete</button>
+            <button (click)="EditContact(i)">edit</button>
+          </td>
+        </ng-container>
+        <ng-container *ngIf="friend.editing == true">
+          <td><input  (keyup)="editfirstname(i,$event)" value="{{friend.firstName}}"></td>
+          <td><input  (keyup)="editlastname(i,$event)" value="{{friend.lastName}}"></td>
+          <td><input  (keyup)="editnumber(i,$event)" value="{{friend.number}}"></td>
+          <td><input  (keyup)="editemail(i,$event)" value="{{friend.email}}"></td>
+          <td>
+            <button (click)="DeleteContact(i)">delete</button>
+            <button (click)="EditContact(i)" >save</button>
+
+          </td>
+        </ng-container>
+
+
+
+        </tr>
+    
+      </table>
+      
+  </div> 
+
+
