@@ -6,16 +6,18 @@ form{
     width:80vw;
 
     button{
-
         padding: 28px 23px;
         margin-bottom:21px;
         font-size: small;
     }
-    .buttons-container{
-        display:flex;
-        // flex-direction: column;
 
-    }
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 
